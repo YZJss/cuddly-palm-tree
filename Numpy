@@ -1,4 +1,5 @@
 import numpy as np
+
 data = np.random.rand(2,3)#生成俩行三列的随机多维数组
 print（type(data))#类型 <class 'numpy.ndarray'>
 print('维度个数', data.ndim)
