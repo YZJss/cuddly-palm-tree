@@ -1,2 +1,3 @@
-### numpy 学习笔记
-### 微信撤回消息查看 itchat
+### numpy 笔记
+### WeChat撤回消息查看 itchat
+### Leetcode 笔记
