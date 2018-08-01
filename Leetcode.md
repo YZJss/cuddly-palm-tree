@@ -111,3 +111,27 @@ class Solution:
 ```
 ps: dict.has_key(key) or return len(nums) != len(set(nums)) 这俩种方法也可以
 ___
+* 5.只出现一次的数字
+   >给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
+###### 说明：你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？
+##### 示例:
+```
+输入: [2,2,1]
+输出: 1
+```
+##### 代码(python):
+```
+#异或运算 a⊕b⊕a=b
+class Solution:
+    def singleNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        res = 0
+        for i in nums:
+            res^=i
+        return res
+```
+方法2: return sum(set(nums))*2-sum(nums) 
+___
