@@ -125,4 +125,15 @@ def quicksort(array):
         greater = [i for i in array[1:] if i > pivot]
         return quicksort(less) + [pivot] + quicksort(greater)
 ```
+***
+#### 散列表
+散列表（Hash table，也叫哈希表），是根据关键码值(Key value)而直接进行访问的数据结构。也就是说，它通过把关键码值映射到表中一个位置来访问记录，以加快查找的速度。这个映射函数叫做散列函数，存放记录的数组叫做散列表。  
+python提供的散列表实现为字典**dict()**  
+#### 小结
+* 散列表的查找、插入和删除都非常快
+* 散列表适合用于模拟映射关系
+* 散列表可用于缓存数据（例如，在Web服务器上）
+* 散列表非常适合用于防止重复
+***
+
 
