@@ -23,10 +23,10 @@ def binary_search(list,item):
 
 #### 大O表示法
 大O表示法 指的并非是以秒为单位的速度。大O表示法让你能够比较操作数，它指出了算法运行时间的增速。
-* O(log n) 对数时间 比如二分查找
+* O(log n) 对数时间 比如[二分查找](https://github.com/YZJss/note/blob/master/Algorithm.md#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE)
 * O(n) 线性时间 比如简单查找
-* O(n*log n) 快速排序
-* O(n*n) 选u8185404择排序
+* O(n*log n) [快速排序](https://github.com/YZJss/note/blob/master/Algorithm.md#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F)
+* O(n*n) [选择排序](https://github.com/YZJss/note/blob/master/Algorithm.md#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F)
 * O(n!) 旅行商问题  
 #### 小结  
 * 二分查找的速度比简单查找快得多
