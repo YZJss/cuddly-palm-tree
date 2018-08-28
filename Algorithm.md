@@ -141,17 +141,27 @@ python提供的散列表实现为字典**dict()**
 队列是一种特殊的线性表，特殊之处在于它只允许在表的前端（front）进行删除操作，而在表的后端（rear）进行插入操作，和栈一样，队列是一种操作受限制的线性表。进行插入操作的端称为队尾，进行删除操作的端称为队头。队列只支持俩种操作：**入队和出队**。  
 队列是一种先进先出(First In First Out FIFO)的数据结构，而栈是一种后进后出(Last In First Out LIFO)的数据结构。  
 假如你经营着一个芒果农场，需要寻找芒果销售商，以便将芒果卖给他。你则需在你的朋友中查找。  
-首先，创建一个朋友名单。然后，依次检查名单中的每个人，看看他是否是芒果经销商。假如你没有朋友是芒果销售商，那么你就必须在朋友的朋友中查找。检查名单中的每个人时，你都将其朋友加入名单。  
-
+首先，创建一个朋友名单。然后，依次检查名单中的每个人，看看他是否是芒果经销商。假如你没有朋友是芒果销售商，那么你就必须在朋友的朋友中查找。检查名单中的每个人时，你都将其朋友加入名单。使用这种算法将搜遍你的整个人际关系网，直到找到芒果经销商，这就是广度优先搜索算法。
 ```
 from collections import deque
+def person_is_seller(name):
+    return name[-1] == 'm'      #判断一个人是不是芒果经销商，这个函数检查人的姓名是否以m结尾：如果是，他就是芒果经销商。这种判断方法有点搞笑，但这个示例而言是可行的。
 def search(name):
     search_queue = deque()      #创建队列
     search_queue += graph[name]     #将自己的邻居加入搜索队列
     searched = []       #这个数组用于记录检查过的人
     while search_queue:
-        
+        person = search_queue.popleft()     #队列左侧第一个并删除
+        if not person in searched:      #仅当这个人没检查过才检查
+            if person_is_seller(person):
+                print(person + " is a mango seller!")
+                return True
+            else:
+                search_queue += graph[person]
+                searched.append(person)
+    return False
 ```
+***
 
 
 
