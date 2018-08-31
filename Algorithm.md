@@ -212,6 +212,15 @@ processed = []
 ```
 
 ```
+node = find_lowest_cost_node(costs)     #在未处理的节点找出开销最小的节点
+while node is not None:
+    cost = costs[node]
+    neighbors = graph[node]
+    for n in neighbors.keys():
+        new_cost = cost + neighbors[n]
+        if costs[n] > new_code:
+
+
 
 ```
 
