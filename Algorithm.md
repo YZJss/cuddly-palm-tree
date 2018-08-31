@@ -210,6 +210,7 @@ parents["fin"] = None
 ```
 processed = []
 ```
+![图片加载失败](https://github.com/YZJss/note/blob/master/img/2.JPG)  
 
 ```
 node = find_lowest_cost_node(costs)     #在未处理的节点找出开销最小的节点
