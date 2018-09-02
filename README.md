@@ -2,4 +2,4 @@
 #### [WeChat 撤回消息查看](https://github.com/YZJss/note/blob/master/wechat.py)
 #### [Leetcode 笔记](https://github.com/YZJss/note/blob/master/Leetcode.md)
 #### [图解算法 笔记](https://github.com/YZJss/note/blob/master/Algorithm.md)
-#### [CET-4 考号查询](https://github.com/YZJss/note/blob/master/CET-4.py)
+#### [CET-4 考号查询（已失效）](https://github.com/YZJss/note/blob/master/CET-4.py)

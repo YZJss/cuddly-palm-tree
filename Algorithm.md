@@ -220,8 +220,26 @@ while node is not None:
     for n in neighbors.keys():
         new_cost = cost + neighbors[n]
         if costs[n] > new_code:
-
-
-
+        costs[n] = new_cost
+        parents[n] = node
+    processed.append(node)
+    node = find_lowest_cost_node(costs)
 ```
 
+```
+def find_lowest_cost_node(costs):
+    lowest_cost = float("inf")
+    lowest_cost_node = None
+    for node in costs:      #遍历所有节点
+        cost = costs[node]
+        if cost < lowest_cost and node not in proccessed:       #如果当前节点的开销更低且未处理过
+            lowest_cost = cost      #就将其视为开销最低的节点
+            lowest_cost_node = node
+    return lowest_cost_node
+```
+#### 小结
+* 广度优先搜索用于在非加权图中查找最短路径。
+* 狄克斯特拉算法用于在加权图中查找最短路径。
+* 仅当权重为正时狄克斯特拉算法才管用。
+* 如果图中包含负权边，请使用贝尔曼-福德算法。
+***
