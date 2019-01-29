@@ -85,6 +85,7 @@ OpenJDK 64-Bit Server VM (build 25.191-b12, mixed mode)
 
 JDK默认安装路径`/usr/lib/jvm`
 
+```
 [root@iZ2zei0fg2v7x4egtl0wllZ /]# cd /usr/lib/jvm
 [root@iZ2zei0fg2v7x4egtl0wllZ jvm]# ls
 java
@@ -99,6 +100,7 @@ jre-1.8.0-openjdk
 jre-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64
 jre-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64-debug
 jre-openjdk
+```
 
 在`/etc/profile`文件最后一行添加如下代码
 
